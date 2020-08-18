@@ -3,7 +3,7 @@ import os
 i = first = last = 0
 path = os.chdir(input("Input the directory: "))
 first_parameter = str(input("Input the first parameter to look for: "))
-last_parameter = str(input("Imput the second parameter to look for: "))
+last_parameter = str(input("Input the second parameter to look for: "))
 for file in os.listdir(path):
     for cont in file:
         if first_parameter in cont:
