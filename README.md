@@ -1,2 +1,2 @@
 # rename-multiple-archives
- Code to rename multiple archives, giving some basic parameters
+ Code to rename multiple folders, giving some basic parameters
