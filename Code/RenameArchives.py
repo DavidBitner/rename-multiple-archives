@@ -13,11 +13,8 @@ for file in os.listdir(path):
         i += 1
     new_file_name = f"{file[first:last]}"
     if new_file_name not in "":
-        while True:
-            try:
-                os.rename(file, new_file_name)
-            except FileExistsError:
-                print(f"Error! {file} cannot be renamed to {new_file_name}, because the file already exists")
-            finally:
-                break
+        try:
+            os.rename(file, new_file_name)
+        except FileExistsError:
+            print(f"Error! {file} cannot be renamed to {new_file_name}, because the file already exists")
     i = last = first = 0
