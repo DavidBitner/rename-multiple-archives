@@ -1,16 +1,16 @@
 import os
 
-path = os.chdir(input("Input the directory: "))
 i = first = last = 0
-
+path = os.chdir(input("Input the directory: "))
+first_parameter = str(input("Input the first parameter to look for: "))
+last_parameter = str(input("Imput the second parameter to look for: "))
 for file in os.listdir(path):
     for cont in file:
-        if "(" not in cont:
-            i += 1
-        if "(" in cont:
+        if first_parameter in cont:
             first = i + 1
-        if ")" in cont:
+        if last_parameter in cont:
             last = i
+        i += 1
     new_file_name = f"{file[first:last]}"
     if new_file_name not in "":
         while True:
